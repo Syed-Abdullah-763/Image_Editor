@@ -43,7 +43,9 @@ filterOptions.forEach((option) => {
         filterName.innerText = option.innerText;
 
         if (option.id === "brightness") {
-            rotate -= 90
+            filterSlider.max = "200";
+            filterSlider.value = brightness;
+            filterValue.innerText = `${brightness}%`;
         } else if (option.id === "saturation") {
             filterSlider.max = "200";
             filterSlider.value = saturation;
