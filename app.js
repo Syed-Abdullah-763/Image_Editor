@@ -123,9 +123,9 @@ const saveImg = () => {
     ctx.filter = previewImg.style.filter = `brightness(${brightness}%) saturate(${saturation}%) invert(${inversion}%) grayscale(${grayscale}%)`
     ctx.translate(canvas.width / 2, canvas.height / 2)
     if (rotate !== 0) {
-        ctx.rotate(rotate * Math.PI / 100)
+        ctx.rotate(rotate * Math.PI / 180)
     }
-    ctx.scale(flipVertical, flipHorizontal)
+    ctx.scale(flipHorizontal, flipVertical)
     ctx.drawImage(previewImg, -canvas.width / 2, -canvas.height / 2, canvas.width, canvas.height)
 
     const link = document.createElement("a")
