@@ -31,7 +31,7 @@
   </head>
   <body>
 
-    <div class="container">
+    <div class="container disable">
         <h2>Image Editor</h2>
 
         <div class="wrapper">
@@ -39,39 +39,40 @@
                 <div class="filter">
                     <label class="tittle">Filters</label>
                     <div class="options">
-                        <button class="active">Brightness</button>
-                        <button>Saturation</button>
-                        <button>Inversion</button>
-                        <button>Grayscale</button>
+                        <button class="active" id="brightness">Brightness</button>
+                        <button id="saturation">Saturation</button>
+                        <button id="inversion">Inversion</button>
+                        <button id="grayscale">Grayscale</button>
                     </div>
                     <div class="slider">
                         <div class="filter-info">
-                            <p class="name">Brightness</p>
-                            <p class="value">100%</p>
+                            <p class="name" id="filterName">Brightness</p>
+                            <p class="value" id="filterValue">100%</p>
                         </div>
-                        <input type="range" value="100" min="0" max="200">
+                        <input type="range" value="100" min="0" max="200" id="filterSlider">
                     </div>
                 </div>
                 <div class="rotate">
                     <label class="tittle">Rotate & Flip</label>
                     <div class="options">
-                        <button><i class="fa-solid fa-rotate-left"></i></button>
-                        <button><i class="fa-solid fa-rotate-right"></i></button>
-                        <button><i class="fas fa-sync-alt"></i></button>
-                        <button><i class="fas fa-exchange-alt"></i></button>
+                        <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
+                        <button id="right"><i class="fa-solid fa-rotate-right"></i></button>
+                        <button id="horizontal"><i class="fas fa-sync-alt"></i></button>
+                        <button id="vertical"><i class="fas fa-exchange-alt"></i></button>
                     </div>
                 </div>
             </div>
             <div class="preview-image">
-                <img src="./Image/landscape-placeholder.svg" alt="">
+                <img src="./Image/landscape-placeholder.svg" alt="" id="previewImg">
             </div>
         </div>
 
         <div class="controls">
-          <button class="reset-filter">Reset</button>
+          <button class="reset-filter" id="resetFilterBtn">Reset</button>
           <div class="row">
-            <button class="choose-img">Select Image</button>
-            <button class="save-img">Save Image</button>
+            <input type="file" accept="Image/*" id="fileInput" hidden>
+            <button class="choose-img" id="selectImg">Select Image</button>
+            <button class="save-img" id="saveImgBtn">Save Image</button>
           </div>
         </div>
 

@@ -20,6 +20,10 @@ body {
     padding: 30px 35px 35px;
     border: 0px 10px 20px rgba(0,0,0,0.1);
 }
+.container.disable :where(.editor-panel, .reset-filter, .save-img) {
+    opacity: 0.6;
+    pointer-events: none;
+}
 
 .container h2 {
     font-size: 22px;
@@ -73,6 +77,10 @@ body {
     color: #fff;
     background-color: #5372f0;
     background: #5372f0;
+
+    &:hover {
+        background-color: #5372f0;
+    }
 }
 
 .filter .slider {
